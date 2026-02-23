@@ -1085,6 +1085,299 @@
   textarea {
     resize: none;
   }
+  
+  
+  @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
+
+body {
+  background: #B1A7A0;
+	color: #FCF9F4;
+  font-family: "Open Sans", "Arial";
+}
+main {
+  max-width: 800px;
+  margin: 30px auto;
+	background: #3F3F3D;
+	padding: 30px;
+	box-shadow: 0 3px 5px rgba(0,0,0,0.2);
+}
+input[name=css-tabs] {
+  display: none;
+}
+a {
+	color: #F29A77;
+}
+
+main h1{
+    margin: 25px 10px 30px 10px;
+    letter-spacing: 4px;
+    font-weight: bold;
+    font-size: 24px;
+    color: #fff;
+}
+main h3{
+margin: 30px 0 10px 0;
+    letter-spacing: 3px;
+    font-size: 19px;
+    color: #fff;
+    font-weight: 600;
+}	
+#tabs {
+	padding: 0 0 0 50px;
+	width: calc(100% + 99px);
+	margin-left: -50px;
+	background: #2B2A28;
+	height: 80px;
+	border-bottom: 5px solid #EB4E01;
+	box-shadow: 0 3px 5px rgba(0,0,0,0.2);
+}
+#tabs::before {
+	content: "";
+	display: block;
+	position: absolute;
+	z-index: -100;
+	width: 100%;
+	left: 0;
+	margin-top: 16px;
+	height: 80px;
+	background: #2B2A28;
+	border-bottom: 5px solid #EB4E01;
+}
+#tabs::after {
+	content: "";
+	display: block;
+	position: absolute;
+	z-index: 0;
+	height: 80px;
+	width: 260px;
+	background: #EB4E01;
+	transition: transform 400ms;
+}
+#tabs label {
+	position: relative;
+	z-index: 100;
+	display: block;
+	float: left;
+  font-size: 11px;
+	text-transform: uppercase;
+	text-align: center;
+	width: 33.33%;
+	height: 100%;
+	border-right: 1px dotted #575654;
+	cursor: pointer;
+}
+#tabs label:first-child {
+	border-left: 1px dotted #575654;
+}
+#tabs label::before {
+	content: "";
+	display: block;
+	height: 30px;
+	width: 30px;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	filter: invert(40%);
+	margin: 10px auto;
+}
+#tab1::before {
+	background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/106891/paper-plane.png);
+}
+#tab2::before {
+	background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/106891/paper-plane.png);
+}
+#tab3::before {
+	background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/106891/paper-plane.png);
+}
+#tab4::before {
+	background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/106891/mans-silhouette.png);
+}
+#radio1:checked ~ #tabs #tab1::before, #radio2:checked ~ #tabs #tab2::before, #radio3:checked ~ #tabs #tab3::before, #radio4:checked ~ #tabs #tab4::before {
+	filter: invert(100%);
+}
+#radio1:checked ~ #tabs::after {
+	transform: translateX(0);
+}
+#radio2:checked ~ #tabs::after {
+	transform: translateX(263px);
+}
+#radio3:checked ~ #tabs::after {
+	transform: translateX(527px);
+}
+
+#content {
+	position: relative;
+	height: 1360px;
+}
+#content::before {
+	content: "";
+	display: block;
+	position: absolute;
+	width: 0;
+	height: 0;
+	margin-left: -50px;
+	border-top: 8px solid #000;
+	border-right: 10px solid #000;
+	border-left: 10px solid transparent;
+	border-bottom: 8px solid transparent;
+}
+#content::after {
+	content: "";
+	display: block;
+	position: absolute;
+	width: 0;
+	height: 0;
+	margin-left: calc(100% + 30px);
+	border-top: 8px solid #000;
+	border-left: 10px solid #000;
+	border-right: 10px solid transparent;
+	border-bottom: 8px solid transparent;
+}
+#content section {
+	position: absolute;
+	transform: translateY(50px);
+	opacity: 0;
+	transition: transform 500ms, opacity 500ms;
+}
+#radio1:checked ~ #content #content1, #radio2:checked ~ #content #content2, #radio3:checked ~ #content #content3, #radio4:checked ~ #content #content4 {
+	transform: translateY(0);
+	opacity: 1;
+}
+span, a, a:hover {
+    display: inline-block;
+    text-decoration: none;
+    color: inherit;
+}
+
+.blog img{
+    max-width: 100%;
+}
+.blog-head {
+  margin-bottom: 70px;
+}
+
+.blog-head h6{
+  color: #f05907;
+  position: relative;
+  display: inline-block;
+  text-transform: capitalize;
+  font-size: 16px;
+}
+
+.blog-head h6:after, .blog-head h6:before{
+  position: absolute;
+  content: "";
+  width: 50px;
+  height: 3px;
+  background: #f05907;
+  top: 50%;
+}
+
+.blog-head h6:after{
+  right: 120%;
+}
+
+.blog-head h6:before{
+  left: 120%;
+}
+
+.overlay{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 0;
+}
+.blog{
+  background-color: #f7f7f7;
+      padding: 100px 0;
+    min-height: 100vh;
+}
+
+.blog .item{
+  background-color: #fff;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+.blog .item .more{
+  position: absolute;
+  right: 30px;
+  bottom: 20px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+  color: #f05907;
+  font-size: 19px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  line-height: 40px;
+  text-align: center;
+  transform: translate(0 , 100px);
+  transition: all 0.3s ease-in-out;
+}
+
+.blog .item:hover .more{
+  transform: translate(0 , 0)
+}
+
+.blog .item:hover .img img{
+  transition: all 0.4s ease;
+}
+
+.blog .item:hover .img img{
+  transform: rotate(-5deg) scale(1.2 , 1.2);
+}
+
+.blog .item .img{
+  clip-path: polygon(0 0, 100% 0, 100% 70%, 0 100%, 0 75%);
+}
+
+.blog .item .info{
+  padding: 30px;
+  position: relative;
+}
+
+.blog .item .info .date {
+    position: absolute;
+    left: calc(32% - 25px);
+    top: -54px;
+    width: 157px;
+    height: 61px;
+    line-height: 20px;
+    text-align: center;
+    background-color: #EB4E01;
+    color: #fff;
+    padding: 5px;
+}
+
+.blog .item .info .date span {
+    display: inline-block;
+    font-size: 15px;
+    padding-top: 7px;
+}
+.blog .item .info h5:hover{
+  color: #EB4E01;
+}
+.blog h2 {
+    text-align: center;
+}
+.blog .item .info .user {
+    margin-top: 20px;
+    color: #EB4E01;
+    font-size: 17px;
+    text-align: center;
+    line-height: 23px;
+    width: 100%;
+}
+.blog .item .info .user i{
+  margin-right: 5px;
+  font-size: 14px;
+}
+  
   </style>
 </head>
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
@@ -1126,82 +1419,116 @@
 
 
 
-<div id="tour" class="bg-1">
-  <div class="container">
-    <h2 class="text-center">TOP Selling Cooper Flag Cards</h3>
-    <p class="text-center">Buy Cooper Flagg Rookie Cards from Topps Now and Panini</p>
-   
-    
-    <div class="row text-center">
-      <div class="col-sm-4">
-        <div class="thumbnail">
-          <img src="Cooper-Flagg-Rookie-Topps-Now.jpeg" width="300" height="420" alt="2025 Topps Now Cooper Flagg Rookie Card - NBA Dallas Mavericks basketball" title="Cooper Flagg Topps Now" />
-          <H2>2025 Topps Now Cooper Flagg<br>Draft Rookie Card #D1</H2><br>
-          
-          <button class="btn">Buy Topps Now<br>Cooper Flagg Cards</button>
-        </div>
-      </div>
-      <div class="col-sm-4">
-        <div class="thumbnail">
-          <img src="cooper-flagg-panini-draft.jpg" width="300" height="420" alt="2025 Panini Cooper Flagg Draft Rookie Card #DN-1" title="Cooper Flagg Panini Rookie Card" />
-          <H2>2025 Panini Cooper Flagg<br>Draft Rookie #DN-1 #1/68380</H2><br>
-          
-          <button class="btn">Buy Panini<br>Cooper Flagg Cards</button>
-        </div>
-      </div>
-      <div class="col-sm-4">
-        <div class="thumbnail">
-          <img src="Cooper-Flagg-Topps-8-bit-ballers-sold.jpg" width="300" height="420" alt="Topps Cooper Flagg 8 Bit Ballers Rookie card NBA #8B-31" title="Topps Cooper Flagg Rookie Cards" />
-          <H2>2025 Topps Cooper Flagg<br>8-Bit Ballers #8B-31</H2><br>
-         
-          <button class="btn">Buy Topps Cooper Flagg<br>8 Bit Ballers</button>
-        </div>
-      </div>
-    </div>
-  </div>
-          
-  <div id="band" class="container text-center">
+
+<section class="blog" data-scroll-index="4">
+        <div class="container">
+          <!-- header of section -->
+          <div class="blog-head text-center">
+            <h2>TOP Selling Cooper Flag Cards</h2>
+            <h6>Buy Cooper Flagg Rookie Cards from Topps Now and Panini</h6>
+          </div>
+
+          <!-- blog items -->
+          <div class="row">
+            <div class="col-md-6 col-lg-4">
+              <div class="item">
+                <div class="img">
+                  <img src="Cooper-Flagg-Rookie-Topps-Now.jpeg" alt="2025 Topps Now Cooper Flagg Rookie Card - NBA Dallas Mavericks basketball" title="Cooper Flagg Topps Now">
+                </div>
+                <div class="info">
+                  <div class="date">
+                    <span>Sports Cards</br>Reserve</span>
+                  </div>
+                  <H2>2025 Panini Cooper Flagg<br>Draft Rookie #DN-1 #1/68380</H2><br>
+                  
+                  <a href="#0" class="user"><i class="fas fa-user"></i>Buy Panini<br>Cooper Flagg Cards</a>
+                  
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="item">
+                  <div class="img">
+                    <img src="cooper-flagg-panini-draft.jpg"  alt="2025 Panini Cooper Flagg Draft Rookie Card #DN-1" title="Cooper Flagg Panini Rookie Card" >
+                  </div>
+                  <div class="info">
+                    <div class="date">
+                      <span>Sports Cards</br>Reserve</span>
+                    </div>
+                   <H2>2025 Topps Cooper Flagg<br>8-Bit Ballers #8B-31</H2>
+                    
+                    <a href="#0" class="user"><i class="fas fa-user"></i>Buy Panini<br>Cooper Flagg Cards</a>
+                 
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-6 col-lg-4">
+                <div class="item">
+                  <div class="img">
+                    <img src="Cooper-Flagg-Topps-8-bit-ballers-sold.jpg" width="300" height="420" alt="Topps Cooper Flagg 8 Bit Ballers Rookie card NBA #8B-31" title="Topps Cooper Flagg Rookie Cards" >
+                  </div>
+                  <div class="info">
+                    <div class="date">
+                      <span>Sports Cards</br>Reserve</span>
+                    </div>
+                     <H2>2025 Topps Cooper Flagg<br>8-Bit Ballers #8B-31</H2>
+                    
+                    <a href="#0" class="user"><i class="fas fa-user"></i>Buy Topps Cooper Flagg<br>8 Bit Ballers</a>
+                    
+                  </div>
+                </div>
+              </div>
+          </div>
+		    <div id="band" class="text-center" style="padding-top:100px;">
   <h2>Why Are Cooper Flagg Rookie Cards Creating Such Market Disruption?</h2>
 
-  <p>The basketball card market hasn't seen this level of pre NBA excitement since Victor Wembanyama. Cooper Flagg represents something different: a player whose college dominance and McDonald's All American pedigree have already established premium value trajectories. Recent premium Cooper Flagg collegiate and pre NBA rookie card sales include a 2024 Bowman Chrome University Superfractor Autograph 1/1 at $97,600.
+  <p style="color:#000;">The basketball card market hasn't seen this level of pre NBA excitement since Victor Wembanyama. Cooper Flagg represents something different: a player whose college dominance and McDonald's All American pedigree have already established premium value trajectories. Recent premium Cooper Flagg collegiate and pre NBA rookie card sales include a 2024 Bowman Chrome University Superfractor Autograph 1/1 at $97,600.
 This reveals the critical distinction between surface level hype and genuine market validation. When collectors pay five figures for pre professional cards, they're not gambling. They're recognizing asymmetric upside that traditional sports card investors miss. The Dallas Mavericks connection adds another layer, as franchise association historically amplifies rookie card values by 35% within the first season.
 </p>
   <br>
 </div> 
-</div>
-<div id="contact" class="container">
-  <br>
-  <h3 class="text-center">Dallas Mavericks NBA Flagg Rookie Cards</h3>  
-  <ul class="nav nav-tabs">
-    <li class="active"><a data-toggle="tab" href="#home">NBA Rookie Cooper Flagg</a></li>
-    <li><a data-toggle="tab" href="#menu1">Cooper Flagg #1 Draft Pick</a></li>
-    <li><a data-toggle="tab" href="#menu2">Topps Rookies</a></li>
-  </ul>
+        </div>
+      </section>
 
-  <div class="tab-content">
-    <div id="home" class="tab-pane fade in active">
-      <h2>Topps and Panini Cooper Flagg Cards</h2>
-      <p>What Makes 2025 Topps Basketball Different From Previous Releases?
-Topps has restructured their entire basketball approach for the 2025 release. This isn't incremental improvement. It's systematic evolution. The flagship product now features enhanced autograph ratios, premium insert designs, and most importantly, deliberate scarcity controls that previous years lacked.
-The 2025 Topps Chrome series specifically targets the PSA grading sweet spot. Projected value of Cooper Flagg's Topps Chrome Refractor Rookie Card (PSA 10) at release is $1,500+, with stabilized values likely between $650 to $700. Compare this to standard ungraded base rookie cards from the 2025 Topps flagship set currently trading in the $2 to $3 range. The grade premium has never been more pronounced.</p>
-   <p><ul>
-    <li>Cooper Flagg rookie cards represent a generational collecting opportunity with clear catalysts ahead</li>
+
+
+<main>
+	<h1>Dallas Mavericks NBA Flagg Rookie Cards</h1>
+	<input id="radio1" type="radio" name="css-tabs" checked>
+	<input id="radio2" type="radio" name="css-tabs">
+	<input id="radio3" type="radio" name="css-tabs">
+	<input id="radio4" type="radio" name="css-tabs">
+	<div id="tabs">
+		<label id="tab1" for="radio1">NBA Rookie Cooper Flagg</label>
+		<label id="tab2" for="radio2">Cooper Flagg #1 Draft Pick</label>
+		<label id="tab3" for="radio3">Topps Rookies</label>
+	</div>
+	<div id="content">
+		<section id="content1">
+			<h3>Topps and Panini Cooper Flagg Cards</h3>
+			<p>
+				What Makes 2025 Topps Basketball Different From Previous Releases? Topps has restructured their entire basketball approach for the 2025 release. This isn't incremental improvement. It's systematic evolution. The flagship product now features enhanced autograph ratios, premium insert designs, and most importantly, deliberate scarcity controls that previous years lacked. The 2025 Topps Chrome series specifically targets the PSA grading sweet spot. Projected value of Cooper Flagg's Topps Chrome Refractor Rookie Card (PSA 10) at release is $1,500+, with stabilized values likely between $650 to $700. Compare this to standard ungraded base rookie cards from the 2025 Topps flagship set currently trading in the $2 to $3 range. The grade premium has never been more pronounced.
+			</p>
+			
+			<ul>
+			 <li>Cooper Flagg rookie cards represent a generational collecting opportunity with clear catalysts ahead</li>
     <li>The 2025 Topps and Panini releases offer distinct value propositions for different collector segments</li>
     <li>Current market pricing hasn't fully incorporated Cooper Flagg's ceiling, creating accumulation windows</li>
     <li>Grading premiums have never been more pronounced, making condition priority one</li>
     <li>Mid tier parallels and numbered inserts offer superior risk adjusted returns versus chase cards</li>
     <li>Pre NBA debut represents optimal entry timing before institutional capital discovers the opportunity</li>
-</ul> 
-</p> 
-<p><H3>Should You Buy Cooper Flagg Cards Now or Wait?</H3>
+			</ul>
+			
+			<p><H3>Should You Buy Cooper Flagg Cards Now or Wait?</H3>
 Here's what most collectors get wrong: they think waiting reduces risk. In reality, waiting eliminates opportunity. The current market presents a unique arbitrage window where Cooper Flagg cards trade below intrinsic value due to pre debut uncertainty.
 Short Print (SSP) Topps NBA Cooper Flagg Rookie Photo Shoot Autographs have sold for as much as $2,700. These aren't outliers. They're leading indicators. When autograph cards command premium prices before a player's first game, smart money has already positioned itself. The power players in this space understand that rookie card appreciation follows predictable patterns, and we're currently in the accumulation phase.
 </p>
-    </div>
-    <div id="menu1" class="tab-pane fade">
-      <h2>Cooper Flagg Rookie Card</h2>
-      <div>
-     <h3>Cooper Flagg is a Basketball Player.</h3>
+		</section>
+		<section id="content2">
+			<h3>Cooper Flagg Rookie Card</h3>
+			<h3>Cooper Flagg is a Basketball Player.</h3>
         <p>The Cooper Flagg NBA journey is anticipated by all fans, watching his performance at the NCAA level, at Duke University, and his potential as one of the top basketball players in the world, hoping he will bring success to his team for seasons to come.</p>
 
         <h3>Dallas Mavericks is an NBA Team.</h3>
@@ -1230,13 +1557,9 @@ Short Print (SSP) Topps NBA Cooper Flagg Rookie Photo Shoot Autographs have sold
 
         <h3>Cooper Flagg Rookie Card is a Collectible Sports Hobby Pack Slab Draft Future Potential Athlete.</h3>
         <p>Every basketball game played on the court and floor is part of the Cooper Flagg card value chain, where every shot and number of points scored contributes to his position and ranking, and the way he handles the ball in a high-stakes tournament or series impacts the perceived future potential of the one-of-a-kind athlete.</p>
-    </div>
-
-    </div>
-    <div id="menu2" class="tab-pane fade">
-      <h2>Topps Basketball Cards</h2>
-      <p><div>
-        <h3>Cooper Flagg is a Player in Basketball</h3>
+		</section>
+		<section id="content3">
+			<h3>Cooper Flagg is a Player in Basketball</h3>
         <p>The hype surrounding Cooper Flagg as a player in basketball is a major driver of growth in the NBA athletes categories, creating massive growth opportunities for his cards and Cooper Flagg rookie card as a prospect in the current season.</p>
 
         <h3>A Rookie Card is a type of Trading Card</h3>
@@ -1271,11 +1594,12 @@ Short Print (SSP) Topps NBA Cooper Flagg Rookie Photo Shoot Autographs have sold
 
         <h3>Account Details log the Items Season Autograph Series Rookie Athlete Future Potential</h3>
         <p>These twelve unique semantic links demonstrate how the trading cards market links players and companies to collectors, detailing the factors from grade to rarity that influence prices and value across the entire range of products.</p>
-    </div></p>
-    </div>
-  </div>
-</div>
-
+		</section>
+		
+	</div>
+	
+</main>
+<div style="clear:Both;"></div>
 <img src="cooper-flagg-cards-for-sale.jpg" class="img-responsive" style="width:100%">  
 <div style="display:none;" aria-hidden="true" data-nosnippet><H2>2025 Cooper Flagg Rookie Cards Collectors Are Missing</H2>
 There's a fundamental flaw in how most collectors approach the Cooper Flagg rookie card market. Many are chasing hype while ignoring the structural advantages that will determine long-term value. The 2025 Topps release represents not just another basketball product launch, but a critical inflection point where smart money positions itself before institutional interest floods the sports card ecosystem. This is much like the situation seen with the Dallas Mavericks when they draft potential players to join their team, aiming for the kind of collectibles and trading cards that can turn into highly sought-after memorabilia.
