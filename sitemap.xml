@@ -3,46 +3,68 @@
 
 <url>
   <loc>https://sportscardsreserve.com/</loc>
-  <lastmod>2025-12-03T16:19:03+00:00</lastmod>
+  <lastmod>2026-03-24</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
+  <loc>https://sportscardsreserve.com/NBA-basketball-cards</loc>
+  <lastmod>2026-03-24</lastmod>
+  <priority>0.90</priority>
+</url>
+<url>
+  <loc>https://sportscardsreserve.com/NFL-football-cards</loc>
+  <lastmod>2026-03-24</lastmod>
+  <priority>0.90</priority>
+</url>
+<url>
+  <loc>https://sportscardsreserve.com/MLB-baseball-cards</loc>
+  <lastmod>2026-03-24</lastmod>
+  <priority>0.90</priority>
+</url>
+<url>
+  <loc>https://sportscardsreserve.com/NHL-hockey-cards</loc>
+  <lastmod>2026-03-24</lastmod>
+  <priority>0.90</priority>
+</url>
+<url>
+  <loc>https://sportscardsreserve.com/nonsports-cards</loc>
+  <lastmod>2026-03-24</lastmod>
+  <priority>0.90</priority>
+</url>
+<url>
   <loc>https://sportscardsreserve.com/about-sports-cards-reserve</loc>
-  <lastmod>2025-12-03T16:19:03+00:00</lastmod>
+  <lastmod>2026-03-24</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://sportscardsreserve.com/contact</loc>
-  <lastmod>2025-12-03T16:19:03+00:00</lastmod>
+  <lastmod>2026-03-24</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://sportscardsreserve.com/privacy-policy</loc>
-  <lastmod>2025-12-03T16:19:03+00:00</lastmod>
-  <priority>0.80</priority>
+  <lastmod>2026-03-24</lastmod>
+  <priority>0.40</priority>
 </url>
 <url>
   <loc>https://sportscardsreserve.com/terms-of-use</loc>
-  <lastmod>2025-12-03T16:19:03+00:00</lastmod>
-  <priority>0.80</priority>
+  <lastmod>2026-03-24</lastmod>
+  <priority>0.40</priority>
 </url>
 <url>
   <loc>https://sportscardsreserve.com/return-policy</loc>
-  <lastmod>2025-12-03T16:19:03+00:00</lastmod>
-  <priority>0.80</priority>
+  <lastmod>2026-03-24</lastmod>
+  <priority>0.40</priority>
 </url>
 <url>
   <loc>https://sportscardsreserve.com/ada-compliance</loc>
-  <lastmod>2025-12-03T16:19:03+00:00</lastmod>
-  <priority>0.80</priority>
+  <lastmod>2026-03-24</lastmod>
+  <priority>0.40</priority>
 </url>
 <url>
   <loc>https://sportscardsreserve.com/ai-policy</loc>
-  <lastmod>2025-12-03T16:19:03+00:00</lastmod>
-  <priority>0.80</priority>
+  <lastmod>2026-03-24</lastmod>
+  <priority>0.40</priority>
 </url>
 
-
-
 </urlset>
-
