@@ -255,5 +255,15 @@ $(document).ready(function(){
 });
 </script>
 
+<script>
+$(function(){
+  if(window.innerWidth>=768){
+    $(".navbar .dropdown").hover(
+      function(){$(this).addClass("open");},
+      function(){$(this).removeClass("open");}
+    );
+  }
+});
+</script>
 </body>
 </html>
