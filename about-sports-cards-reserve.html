@@ -53,16 +53,19 @@
   }
   .carousel-inner img {
     -webkit-filter: grayscale(90%);
-    filter: grayscale(20%); /* make all photos black and white */ 
-    width: 100%; /* Set width to 100% */
+    filter: grayscale(20%);
+    width: 100%;
     margin: auto;
+    margin-bottom: -300px;
   }
+  .carousel-inner { overflow: hidden; }
+  .carousel-caption { bottom: 320px; }
   .carousel-caption h3 {
     color: #fff !important;
   }
   @media (max-width: 600px) {
     .carousel-caption {
-      display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
+      display: none;
     }
   }
   .bg-1 {
@@ -229,7 +232,7 @@
 
 
 
-<img src="cooper-flagg-cards-for-sale.jpg" class="img-responsive" style="width:100%">  
+<div style="overflow:hidden; margin-bottom:-400px;"><img src="cooper-flagg-cards-for-sale.jpg" class="img-responsive" style="width:100%; margin-bottom:-400px;" alt="Sports cards collection"></div>  
 
 
 <footer class="text-center">
